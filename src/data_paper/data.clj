@@ -11,3 +11,6 @@
 (def conn (d/connect client {:db-name "data-paper"}))
 
 (def db (d/db conn))
+
+(defn transact! [conn tx]
+  (d/transact conn {:tx-data tx}))

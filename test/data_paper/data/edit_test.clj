@@ -1,9 +1,10 @@
 (ns data-paper.data.edit-test
-  (:use [data-paper.test.util]
-        [clojure.test]))
+  (:require [data-paper.data :as data]
+            [clojure.test :refer [deftest]]
+            [data-paper.data.schema.collection :as collection]))
 
-(deftest update-field-value!
-  (println x)
-  (is (= "1" x)))
+(data/transact! data/conn collection/schema)
 
-(run-tests)
+;(run-tests)
+
+
