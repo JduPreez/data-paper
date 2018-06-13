@@ -5,6 +5,7 @@
 
 (data/transact! data/conn collection/schema)
 
-;(run-tests)
-
-
+;; A test modification
+(deftest update-field-value!
+  (println x)
+  (is (= "1" x)))
